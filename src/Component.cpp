@@ -19,6 +19,10 @@ void Component::draw(bool show_gui){
 	int step = timeToStep(time, ptime, ntime, points.size());
 	pos = points[step];
 
+	if(show_gui){
+		ofSetColor(ofRandom(128, 255), ofRandom(128, 255), ofRandom(128, 255));
+	}
+
 	int i = 0;
 	for(auto &p : ppoints){
 		if(i++ >= step && i < ppoints.size()) ofDrawLine(p, ppoints[i]);
