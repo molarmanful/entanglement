@@ -10,6 +10,16 @@ When debugging some particularly problematic issues with curved panel movements,
 
 ![](./gui.png)
 
+## Properties
+
+### Colors
+
+I tried playing around with different colors, but eventually settled on keeping things minimalist/simple. I didn't like the way that colors really looked in relation to my piece, but pressing spacebar will give you colors.
+
+### R/evolution
+
+The lines each move in constrained randomness; that is, each line's general positioning/curvature is random but follow the restrictions of a Bezier curve. The speed at which each curve is drawn is also random. To provide a final aesthetic touch, I made it probable for lines to return to the center of the screen, creating a general sense of source/target and biasing the image towards looping shapes.
+
 ## Build
 
 Requires OpenFrameworks.

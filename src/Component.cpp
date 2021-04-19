@@ -9,6 +9,7 @@ void Component::setup(glm::vec3 start){
 
 	cps.push_back(start);
 	regenCurve(false);
+	color.set(ofRandom(128, 255), ofRandom(128, 255), ofRandom(128, 255));
 }
 
 void Component::draw(bool show_gui){
@@ -19,9 +20,7 @@ void Component::draw(bool show_gui){
 	int step = timeToStep(time, ptime, ntime, points.size());
 	pos = points[step];
 
-	if(show_gui){
-		ofSetColor(ofRandom(128, 255), ofRandom(128, 255), ofRandom(128, 255));
-	}
+	ofSetColor(show_gui ? color : ofColor::white);
 
 	int i = 0;
 	for(auto &p : ppoints){

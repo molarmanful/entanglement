@@ -28,6 +28,8 @@ class Component {
 
 		bool ended;
 		bool ret;
+
+		ofColor color;
 };
 
 #endif
