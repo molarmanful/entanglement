@@ -21,6 +21,7 @@ void ofApp::draw(){
 	ofSetBackgroundColor(0);
 
 	for(auto &c : components){
+		// limit simultaneous lines for performance
 		if(components.size() < 10 && c->ended){
 			qcomp.push_back(c->cps.front());
 			c->ended = false;
